@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
+  <focus>
+    <focusNew>yes</focusNew>
+    <!-- always try to focus new windows when they appear. other rules do apply -->
+    <followMouse>yes</followMouse>
+    <!-- move focus to a window when you move the mouse into it -->
+    <focusLast>yes</focusLast>
+    <!-- focus the last used window when changing desktops, instead of the one under the mouse pointer. when followMouse is enabled -->
+    <underMouse>no</underMouse>
+    <!-- move focus under the mouse, even when the mouse is not moving -->
+    <focusDelay>200</focusDelay>
+    <!-- when followMouse is enabled, the mouse must be inside the window for
+       		this many milliseconds (1000 = 1 sec) before moving focus to it -->
+    <raiseOnFocus>no</raiseOnFocus>
+    <!-- when followMouse is enabled, and a window is given focus by moving the
+       		mouse into it, also raise the window -->
+  </focus>
+  <placement>
+    <center>yes</center>
+    <primaryMonitor>1</primaryMonitor>
+    <policy>Smart</policy>
+    <monitor>Any</monitor>
+  </placement>
+  <theme>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>no</animateIconify>
+    <titleLayout>NLIMC</titleLayout>
+    <font place="ActiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="InactiveWindow">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="MenuHeader">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="MenuItem">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name/>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
+    </font>
+    <name>leaf</name>
+  </theme>
+  <desktops>
+    <number>1</number>
+    <firstdesk>1</firstdesk>
+    <popupTime>0</popupTime>
+    <names>
+	    <!--  <name>home: </name> -->
+	    <!--  <name>dev: </name> -->
+    </names>
+  </desktops>
+  <resize>
+    <drawContents>no</drawContents>
+    <popupShow>Never</popupShow>
+    <popupPosition>Center</popupPosition>
+    <popupFixedPosition>
+      <x>0</x>
+      <y>0</y>
+    </popupFixedPosition>
+  </resize>
+  <keyboard>
+    <popupTime>0</popupTime>
+    <keybind key="A-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="A-2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="A-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="A-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-a">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="A-z">
+      <action name="Iconify"/>
+    </keybind>
+    <keybind key="A-l">
+      <action name="DirectionalCycleWindows">
+	<dialog>no</dialog>
+	<bar>no</bar>
+	<raise>yes</raise>
+        <direction>right</direction>
+      </action>
+    </keybind>
+    <keybind key="A-h">
+      <action name="DirectionalCycleWindows">
+	<dialog>no</dialog>
+	<bar>no</bar>
+	<raise>yes</raise>
+        <direction>left</direction>
+      </action>
+    </keybind>
+    <keybind key="A-k">
+      <action name="DirectionalCycleWindows">
+	<dialog>no</dialog>
+	<bar>no</bar>
+	<raise>yes</raise>
+        <direction>up</direction>
+      </action>
+    </keybind>
+    <keybind key="A-j">
+      <action name="DirectionalCycleWindows">
+	<dialog>no</dialog>
+	<bar>no</bar>
+	<raise>yes</raise>
+        <direction>down</direction>
+      </action>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow">
+	<dialog>yes</dialog>
+	<bar>no</bar>
+	<raise>no</raise>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
+      </action>
+    </keybind>
+    <keybind key="W-h">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>10</x>
+        <y>10</y>
+        <width>49%</width>
+        <height>98%</height>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-10</x>
+        <y>10</y>
+        <width>49%</width>
+        <height>98%</height>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-10</x>
+        <y>10</y>
+        <width>49%</width>
+        <height>48%</height>
+      </action>
+    </keybind>
+    <keybind key="W-period">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-10</x>
+        <y>-10</y>
+        <width>49%</width>
+        <height>48%</height>
+      </action>
+    </keybind>
+    <keybind key="W-y">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>10</x>
+        <y>10</y>
+        <width>49%</width>
+        <height>48%</height>
+      </action>
+    </keybind>
+    <keybind key="W-b">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>10</x>
+        <y>-10</y>
+        <width>49%</width>
+        <height>48%</height>
+      </action>
+    </keybind>
+    <keybind key="W-j">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>50%</width>
+        <height>95%</height>
+      </action>
+    </keybind>
+  </keyboard>
+  <mouse>
+    <dragThreshold>1</dragThreshold>
+    <context name="Frame">
+      <mousebind button="A-Left" action="Press">
+        <action name="Focus"/>
+        <action name="Raise"/>
+        <action name="unshade"/>
+      </mousebind>
+      <mousebind button="A-Right" action="Drag">
+        <action name="Resize"/>
+      </mousebind>
+      <mousebind button="A-Left" action="Drag">
+        <action name="Move"/>
+      </mousebind>
+    </context>
+    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+    <doubleClickTime>200</doubleClickTime>
+    <context name="Titlebar">
+      <mousebind button="Left" action="DoubleClick"/>
+    </context>
+  </mouse>
+  <applications>
+    <application type="normal">
+      <decor>no</decor>
+      <position>
+        <x>center</x>
+        <y>center</y>
+      </position>
+    </application>
+    <application class="Firefox">
+      <decor>no</decor>
+      <size>
+        <width>55%</width>
+        <height>80%</height>
+      </size>
+    </application>
+    <application class="st-256color">
+      <size>
+        <width>45%</width>
+        <height>55%</height>
+      </size>
+    </application>
+  </applications>
+  <margins>
+    <left>0</left>
+    <right>0</right>
+    <top>0</top>
+    <bottom>0</bottom>
+  </margins>
+  <dock>
+    <position>TopLeft</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <stacking>Above</stacking>
+    <direction>Vertical</direction>
+    <noStrut>no</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
+</openbox_config>
